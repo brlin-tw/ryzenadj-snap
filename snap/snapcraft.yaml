@@ -42,10 +42,10 @@ parts:
 apps:
   ryzenadj:
     command: usr/local/bin/ryzenadj
-    plugs:
+    #plugs:
       # Allow readwrite access to /dev/mem
       # https://snapcraft.io/docs/physical-memory-observe-interface
-      - physical-memory-control
+      #- physical-memory-control
 
       # Allow readonly access to sysfs attributes of PCI devices
-      - hardware-observe
+      #- hardware-observe
