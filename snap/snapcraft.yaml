@@ -18,8 +18,34 @@ description: |
       https://gitlab.com/brlin/ryzenadj-snap/-/issues
 
 grade: stable
-confinement: strict
+confinement: classic
 
 parts:
   ryzenadj:
-    plugin: nil
+    source: https://github.com/FlyGoat/RyzenAdj.git
+    source-tag: v0.15.0
+    source-depth: 1
+    plugin: cmake
+    # Reference:
+    #
+    # Build Requirements | Build | FlyGoat/RyzenAdj: Adjust power management settings for Ryzen APUs
+    # https://github.com/FlyGoat/RyzenAdj?tab=readme-ov-file#build-requirements
+    build-packages:
+      - gcc
+      - g++
+      - libpci-dev
+    stage-packages:
+      - libpci3
+    build-attributes:
+      - enable-patchelf
+
+apps:
+  ryzenadj:
+    command: usr/local/bin/ryzenadj
+    plugs:
+      # Allow readonly access to /dev/mem
+      # https://snapcraft.io/docs/physical-memory-observe-interface
+      - physical-memory-observe
+
+      # Allow readonly access to sysfs attributes of PCI devices
+      - hardware-observe
