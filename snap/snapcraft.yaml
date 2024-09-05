@@ -1,0 +1,25 @@
+# Copyright 2024 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
+# SPDX-License-Identifier: MIT
+name: ryzenadj
+title: RyzenAdj (UNOFFICIAL)
+base: core22
+version: 0.0.1
+#adopt-info: ryzenadj
+summary: Adjust power management settings for Ryzen APUs
+description: |
+  Refer [the upstream project website](https://github.com/FlyGoat/RyzenAdj) for info on using this application.
+
+  **Disclaimer:**
+
+  This is NOT an official distribution of RyzenAdj, refer the
+  snap's own issue tracker for support:
+
+      Issues · 林博仁 Buo-ren Lin / Unofficial snap packaging for RyzenAdj · GitLab
+      https://gitlab.com/brlin/ryzenadj-snap/-/issues
+
+grade: stable
+confinement: strict
+
+parts:
+  ryzenadj:
+    plugin: nil
