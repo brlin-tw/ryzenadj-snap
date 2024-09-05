@@ -1,0 +1,34 @@
+# GitHub Actions workflow for checking whether the snap can be built
+# in an AMD64 environment
+#
+# References:
+#
+# * Workflow syntax for GitHub Actions - GitHub Docs
+#   https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+# * ci/test-snap-build at main · snapcrafters/ci
+#   https://github.com/snapcrafters/ci/tree/main/test-snap-build
+#
+# Copyright 2024 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
+# SPDX-License-Identifier: MIT
+name: Check potential problems in the project
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  test-snap-can-build:
+    name: >
+      Test whether the snap can be built in an typical AMD64
+      environment.
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 🧪 Build snap on amd64
+        uses: snapcrafters/ci/test-snap-build@main
+
+      - name: Send CI result notification to the Telegram channel
+        uses: yanzay/notify-telegram@v0.1.0
+        if: always()
+        with:
+          chat: '@brlin_project_ci_results'
+          token: ${{ secrets.telegram_bot_api_token_ci }}
+          status: ${{ job.status }}
