@@ -10,7 +10,8 @@
 #
 # Copyright 2024 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
 # SPDX-License-Identifier: MIT
-name: Check potential problems in the project
+name: >
+  Test whether the snap can be built in an typical AMD64 environment.
 on:
   push:
     branches:
