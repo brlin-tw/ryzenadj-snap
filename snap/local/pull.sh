@@ -74,7 +74,7 @@ printf \
 printf 'Info: Determining the snap version string...\n'
 snap_version_string="${upstream_version_string}+s${packaging_version_string}"
 printf \
-    'Info: Snap version string determined to be "%s".' \
+    'Info: Snap version string determined to be "%s".\n' \
     "${snap_version_string}"
 
 printf \
