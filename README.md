@@ -7,6 +7,8 @@ Provide ready-to-use RyzenAdj software for snap-enabled GNU/Linux distributions.
 
 ## References
 
+The following external material is referenced during the development of this project:
+
 * [FlyGoat/RyzenAdj: Adjust power management settings for Ryzen APUs](https://github.com/FlyGoat/RyzenAdj)  
   Upstream project.
 
