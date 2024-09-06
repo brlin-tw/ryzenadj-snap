@@ -22,6 +22,9 @@ grade: stable
 # available from snapd for now
 confinement: devmode
 
+architectures:
+  - amd64
+
 parts:
   ryzenadj:
     source: https://github.com/FlyGoat/RyzenAdj.git
