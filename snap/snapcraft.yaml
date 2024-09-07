@@ -16,6 +16,13 @@ description: |
       Issues · 林博仁 Buo-ren Lin / Unofficial snap packaging for RyzenAdj · GitLab
       https://gitlab.com/brlin/ryzenadj-snap/-/issues
 
+  **Snap-specific information:**
+
+  Due to [snapd's limitation][1] currently this snap can only be installed
+  using the `devmode` confinement mode.
+
+  [1]: https://forum.snapcraft.io/t/feature-request-please-implement-interface-for-writing-to-the-pci-config-space/41887
+
 grade: stable
 
 # Require write access to the north bridge PCI device, which is not
