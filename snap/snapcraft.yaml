@@ -8,16 +8,16 @@ summary: Adjust power management settings for Ryzen APUs
 description: |
   Refer the upstream project website for info on using this application:
 
-      FlyGoat/RyzenAdj: Adjust power management settings for Ryzen APUs
-      https://github.com/FlyGoat/RyzenAdj
+  FlyGoat/RyzenAdj: Adjust power management settings for Ryzen APUs
+  https://github.com/FlyGoat/RyzenAdj
 
   **Disclaimer:**
 
   This is NOT an official distribution of RyzenAdj, refer the
   snap's own issue tracker for support:
 
-      Issues · 林博仁 Buo-ren Lin / Unofficial snap packaging for RyzenAdj · GitLab
-      https://gitlab.com/brlin/ryzenadj-snap/-/issues
+  Issues · 林博仁 Buo-ren Lin / Unofficial snap packaging for RyzenAdj · GitLab
+  https://gitlab.com/brlin/ryzenadj-snap/-/issues
 
   **Snap-specific information:**
 
