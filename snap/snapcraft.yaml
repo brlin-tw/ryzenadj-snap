@@ -8,7 +8,6 @@ summary: Adjust power management settings for Ryzen APUs
 description: |
   Refer the upstream project website for info on using this application:
 
-  FlyGoat/RyzenAdj: Adjust power management settings for Ryzen APUs
   https://github.com/FlyGoat/RyzenAdj
 
   **Disclaimer:**
